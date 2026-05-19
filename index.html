@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>物流帝国 - 物流公司模拟器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🚚 物流帝国</h1>
+        
+        <!-- 公司信息面板 -->
+        <div class="company-info">
+            <div class="info-card">
+                <h3>💰 资金</h3>
+                <p id="money">100000</p>
+                <small>¥</small>
+            </div>
+            <div class="info-card">
+                <h3>🚛 卡车数量</h3>
+                <p id="truckCount">1</p>
+            </div>
+            <div class="info-card">
+                <h3>⭐ 公司等级</h3>
+                <p id="level">1</p>
+            </div>
+            <div class="info-card">
+                <h3>📦 总订单</h3>
+                <p id="totalOrders">0</p>
+            </div>
+        </div>
+
+        <!-- 购买卡车区域 -->
+        <div class="shop-section">
+            <h2>🚛 购买卡车</h2>
+            <div class="truck-shop">
+                <div class="truck-item">
+                    <span>小型货车 - 价格: ¥5000</span>
+                    <button onclick="buyTruck(5000)">购买</button>
+                </div>
+                <div class="truck-item">
+                    <span>中型卡车 - 价格: ¥15000</span>
+                    <button onclick="buyTruck(15000)">购买</button>
+                </div>
+                <div class="truck-item">
+                    <span>大型拖车 - 价格: ¥35000</span>
+                    <button onclick="buyTruck(35000)">购买</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 订单区域 -->
+        <div class="orders-section">
+            <h2>📋 可用订单</h2>
+            <div id="ordersList" class="orders-list">
+                <!-- 订单会动态生成在这里 -->
+            </div>
+        </div>
+
+        <!-- 统计信息 -->
+        <div class="stats-section">
+            <h2>📊 公司统计</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span>今日收入:</span>
+                    <span id="todayIncome">0</span>
+                </div>
+                <div class="stat-item">
+                    <span>总利润:</span>
+                    <span id="totalProfit">0</span>
+                </div>
+                <div class="stat-item">
+                    <span>活跃订单:</span>
+                    <span id="activeOrders">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
